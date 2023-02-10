@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-CORNER | Checkout</title>
+  <link rel="icon" href="titlelogo.png" type="image" sizes="32x32">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style type="text/css">
+      .blur   {
+
+  text-shadow: 0px 0px 10px #000000;
+}
+#overlay    {
+    position: fixed;
+    display: none;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,.8);
+}
+#popup {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background: rgb(0,0,0);
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+    </style>
+</head>
+<body style="background-color: black; color: white; overflow-x: hidden; ">
+  <div id="drkbg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html"><img src="logo.png" height="25px" style="margin-bottom: 4px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="home.html" id="hovereffect1"><style>#hovereffect1:hover {color: white}</style>Home</a>
+        </li>
+        
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" id="hovereffect1" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            Products
+          </a>
+          <ul class="dropdown-menu" style="background-color: black;"  aria-labelledby="navbarDropdown"><style>#hovereffect2:hover {background-color: red;color: white}</style>
+            <li><a class="dropdown-item" href="laptop.html" id="hovereffect2" style="color: white">Laptops</a></li>
+            <li><a class="dropdown-item" href="gamingchasis.html" id="hovereffect2" style="color: white">Gaming Chassis</a></li>
+            <li><a class="dropdown-item" href="coolingsolution.html" id="hovereffect2" style="color: white">Cooling Solution</a></li>
+            <li><a class="dropdown-item" href="graphiccard.html" id="hovereffect2" style="color: white">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="storagedevice.html" id="hovereffect2" style="color: white">Storage Devices</a></li>
+            <li><a class="dropdown-item" href="headphone.html" id="hovereffect2" style="color: white">Headphones/Earphones</a></li>
+            <li><a class="dropdown-item" href="keyboard.html" id="hovereffect2" style="color: white">Keyboard</a></li>
+            <li><a class="dropdown-item" href="ram.html" id="hovereffect2" style="color: white">RAMS</a></li>
+            <li><a class="dropdown-item" href="motherboard.html" id="hovereffect2" style="color: white">Motherboards</a></li>
+            <li><a class="dropdown-item" href="mouse.html" id="hovereffect2" style="color: white">Mouse</a></li>
+            <li><a class="dropdown-item" href="psu.html" id="hovereffect2" style="color: white">Power Supply</a></li>
+            <li><a class="dropdown-item" href="processor.html" id="hovereffect2" style="color: white">Processors</a></li>
+            <li><a class="dropdown-item" href="monitor.html" id="hovereffect2" style="color: white">Monitors</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="graphiccard.html" id="hovereffect1"><style>#hovereffect1:hover {color: white}</style>GPU</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="monitor.html" id="hovereffect1"><style>#hovereffect1:hover {color: white}</style>Monitors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="storagedevice.html" id="hovereffect1"><style>#hovereffect1:hover {color: white}</style>Storage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gamingchasis.html" id="hovereffect1"><style>#hovereffect1:hover {color: white}</style>Gaming Chassis</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="hovereffect1"><style>#hovereffect1:hover {color: white}</style>
+           Used Products
+          </a>
+           <ul style="background-color: black" class="dropdown-menu" aria-labelledby="navbarDropdown"><style>#hovereffect2:hover {background-color: red;color: white}</style>
+          <li><a class="dropdown-item" href="uprocessor.html"id="hovereffect2" style="color: white">Processors</a></li>
+            <li><a class="dropdown-item" href="umotherboard.html" style="color: white" id="hovereffect2" >Motherboards</a></li>
+            <li><a class="dropdown-item" href="uram.html"style="color: white" id="hovereffect2" >RAMS</a></li>
+            <li><a class="dropdown-item" href="ugpu.html"style="color: white" id="hovereffect2" >Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="ustorage.html"style="color: white" id="hovereffect2" >Storage Devices</a></li>
+            <li><a class="dropdown-item" href="upsu.html"style="color: white" id="hovereffect2" >Power Supply</a></li>
+            <li><a class="dropdown-item" href="ucasing.html"style="color: white" id="hovereffect2" >Gaming Chassis</a></li>
+      </ul>
+    </li>
+  </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger" type="submit">Search</button>&nbsp;
+        <img src="cart.png" height="30px" style="margin-top: 4px; margin-left: 4px" onClick="location.href='addtocart.html'" id="scohvr">
+      </form>
+    </div>
+  </div>
+</nav>
+<style type="text/css">
+          #scohvr:hover {
+            cursor: pointer;
+          }
+        </style>
+<div style="margin-top: 40px; margin-left: 20px;" class="row">
+	<div class="card text-white bg-secondary mb-3 shadow-lg p-3 mb-5 bg-dark rounded col-lg-7" style="margin-left: 0;">
+    <div class="card-body">
+    <h4 class="card-title">Delivery Information</h4>
+      <div class="row">
+        <div class="col-lg-4">
+          <label for="fname">Name:</label><br>
+          <input type="text" id="fname" name="fname" class="form-control" style="width: 19.38rem" placeholder="Enter your name here."><br>
+        </div>
+        <div class="col-lg-6" style="margin-left: 100px">
+          <label for="inputState">State</label><br>
+        <select id="inputState" class="form-control" style="width: 19.38rem">
+        <option selected>Select</option>
+        <option>Sindh</option>
+        <option>Punjab</option>
+        <option>Balochistan</option>
+        <option>Khyber Pakhtunkhwa</option>
+      </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+      <label for="lphone">Phone:</label><br>
+      <input type="text" id="lphone" name="lphone" class="form-control" style="width: 19.38rem" placeholder="Enter your phone number here.">
+    </div>
+        <div class="col-lg-6" style="margin-left: 100px">
+          <label for="inputcity">City</label><br>
+        <select id="inputcity" class="form-control" style="width: 19.38rem">
+        <option selected>Select</option>
+        <option>Karachi</option>
+        <option>Lahore</option>
+        <option>Islamabad</option>
+        <option>Hyderabad</option>
+        <option>Peshawar</option>
+        <option>Quetta</option>
+      </select>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 20px">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-6" style="margin-left: 100px">
+          <label for="inputarea">Area</label><br>
+        <select id="inputarea" class="form-control" style="width: 19.38rem">
+        <option selected>Select</option>
+        <option>Karachi-Malir</option>
+        <option>Karachi-DHA</option>
+        <option>Karachi-Gulshan-e-Iqbal</option>
+        <option>Lahore-Bahria Town</option>
+        <option>Lahore-Cantt</option>
+        <option>Lahore-Gulberg</option>
+        <option>Islamabad-Ghauri Town</option>
+        <option>Islamabad-F</option>
+        <option>Islamabad-G</option>
+        <option>Hyderabad-Latifabad</option>
+        <option>Hyderabad-Saddar</option>
+        <option>Peshawar-Civil Quater</option>
+        <option>Peshawar-Custom Chowk</option>
+        <option>Peshawar-Faqeerabad</option>
+        <option>Quetta-Hazara Town</option>
+        <option>Quetta-Kuchlak</option>
+        <option>Quetta-Ziarat</option>
+      </select>
+        </div>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-6" style="margin-left: 105px">
+          <label for="inputarea">Address</label><br>
+          <input type="text" id="laddress" name="laddress" class="form-control" style="width: 19.38rem" placeholder="Enter your Address here."><br>
+      </select>
+        </div>
+      </div>
+      </div>
+      <div class="card text-white bg-secondary mb-3 shadow-lg p-3 mb-5 bg-dark rounded col-lg-4" style="margin-left: 30px; margin-right: 10px;">
+        <div class="card-body">
+          <h4 class="card-title" style="margin: 10px">Order Summary</h4>
+          <div class="row">
+            <div class="col-lg-4" style="margin: 20px; margin-right: 0; margin-bottom: 10px">Subtotal</div>
+            <div class="col-lg-6" style="text-align: right; margin: 20px; margin-bottom: 10px">Rs.45,000</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4" style="margin: 20px; margin-right: 0; margin-bottom: 10px">Shipping Fee</div>
+            <div class="col-lg-6" style="text-align: right; margin: 20px; margin-bottom: 10px">Rs.111</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4" style="margin: 20px; margin-right: 0;">Discount</div>
+            <div class="col-lg-6" style="text-align: right; margin: 20px;">Rs.100</div>
+          </div>
+
+          <div class="row" style="margin-bottom: 20px">
+            <input type="text" name="tvouch" id="tvouch" class="form-control col-lg-4" style="width: 14rem; margin-left: 10px" placeholder="Enter voucher code">
+            <a href="#" class="btn btn-outline-danger col-lg-4" style="margin-left: 40px">Apply</a>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4" style="margin: 20px; margin-right: 0; font-size: 20px">Total</div>
+            <div class="col-lg-6" style="text-align: right; margin: 20px;">Rs.45,011</div>
+          </div>
+          <a href="javascript:myBlurFunction(1);" class="btn btn-outline-danger" style="width: 100%" onclick="showdiv()" onclick="function()">Proceed to Pay</a>
+        </div>
+  
+</form>
+  </div>
+  </div>
+</div>
+<style type="text/css">
+  .blur {
+   text-shadow: 0px 0px 10px #000000;
+}
+</style>
+<script type="text/javascript">
+  function showdiv() {
+   document.getElementById('paymentdiv').style.display = "block";
+}
+</script>
+<script type="text/javascript">
+  function closediv() {
+    document.getElementById('paymentdiv').style.display = "none";
+  }
+</script>
+<script>myBlurFunction = function(state) {
+    var containerElement = document.getElementById('main_container');
+    var overlayEle = document.getElementById('overlay');
+
+    if (state) {
+        overlayEle.style.display = 'block';
+        containerElement.setAttribute('class', 'blur');
+    } else {
+        overlayEle.style.display = 'none';
+        containerElement.setAttribute('class', null);
+    }
+};
+</script>
+<div id="overlay">
+  <div id="popup" class="bg-dark" style="height: 600px">
+<div class="container">
+  <div class="row-fluid">
+      <form class="form-horizontal">
+        <fieldset>
+          <div id="legend">
+            <b style="font-size: 30px">Payment Method</b><a href="javascript:myBlurFunction(0);" class="btn btn-outline-danger" style="align-self: right; margin-left: 96px; height: 35px">X</a>
+          </div>
+          <input style="text-decoration: none;" onclick="opendivcc(1)" type="radio" name="paymentmethod"><b style="font-size: 17px"> Use Credit Card</b>
+          <input type="radio" name="paymentmethod" onclick="opendivcc(0)" style="margin-left: 10px"><b style="font-size: 17px"> Cash On Delivery</b><br>
+          <div id="toopen" style="display: none;">
+      
+          <div class="control-group">
+            <label class="control-label"  for="username">Card Holder's Name</label>
+            <div class="controls">
+              <input type="text" id="username" name="username" placeholder="" class="form-control">
+            </div>
+          </div>
+     
+         
+          <div class="control-group">
+            <label class="control-label" for="email">Card Number</label>
+            <div class="controls">
+              <input type="text" id="email" name="email" placeholder="" class="form-control">
+            </div>
+          </div>
+     
+          
+          <div class="control-group">
+            <label class="control-label" for="password">Card Expiry Date</label>
+            <div class="controls row">
+              <select class="form-control" name="expiry_month" id="expiry_month" style="width: 40%; margin-left: 13px;">
+                <option value="01">Jan (01)</option>
+                <option value="02">Feb (02)</option>
+                <option value="03">Mar (03)</option>
+                <option value="04">Apr (04)</option>
+                <option value="05">May (05)</option>
+                <option value="06">June (06)</option>
+                <option value="07">July (07)</option>
+                <option value="08">Aug (08)</option>
+                <option value="09">Sep (09)</option>
+                <option value="10">Oct (10)</option>
+                <option value="11">Nov (11)</option>
+                <option value="12">Dec (12)</option>
+              </select>
+              <select class="form-control" name="expiry_year" style="width: 40%; margin-left: 55px">
+                <option value="13">2021</option>
+                <option value="14">2022</option>
+                <option value="15">2023</option>
+                <option value="16">2024</option>
+                <option value="17">2025</option>
+                <option value="18">2026</option>
+                <option value="19">2027</option>
+                <option value="20">2028</option>
+                <option value="21">2029</option>
+                <option value="22">2030</option>
+                <option value="23">2031</option>
+              </select>
+            </div>
+          </div>
+     
+          <div class="control-group">
+            <label class="control-label"  for="password_confirm">Card CVV</label>
+            <div class="controls">
+              <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="form-control">
+            </div>
+          </div>
+     
+          <div class="control-group">
+            <div class="controls">
+              <label class="checkbox" for="save_card">
+                <input type="checkbox" id="save_card" value="option1">
+                Save card on file?
+              </label>
+            </div>
+          </div>
+        </div>
+     <a href="thankyou.html" class="btn btn-danger" style="width: 90%; position: absolute; top: 550px; left: 20px">Confirm Order</a>
+        </fieldset>
+      </form>
+    </div>
+</div>
+  </div>
+</div>
+<script type="text/javascript">
+  opendivcc = function(state) {
+    var overlayEle = document.getElementById('toopen');
+
+    if (state) {
+        overlayEle.style.display = 'block';
+    } else {
+        overlayEle.style.display = 'none';
+    }
+};
+</script>
+<style type="text/css">
+  #toopen:hover {
+    cursor: pointer;
+  }
+</style>
+<footer class="text-center text-lg-start bg-dark" style="width: 100%;">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase"><img src="logo.png"height="30px" id="onhover123" onClick="location.href='home.html'" style="margin-bottom: 4px"></h5><style type="text/css">#onhover123:hover {cursor: pointer;}</style>
+
+        <p style="font-size: 18px">
+          Welcome to E-Corner. Online Computer store in Pakistan. Buy Dell, Lenovo, HP, Acer laptops at best prices in Pakistan.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Products:</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+          <a href="processor.html"style="color: yellow;text-decoration: none;">Processors</a>
+          </li>
+          <li>
+            <a href="monitor.html"style="color: yellow;text-decoration: none;">Monitors</a>
+          </li>
+          <li>
+            <a href="graphiccard.html"style="color: yellow;text-decoration: none;">Graphic Cards</a>
+          </li>
+          <li>
+            <a href="gamingchasis.html"style="color: yellow;text-decoration: none;">Gaming Chassis</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Contact Us</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li style="color:yellow">
+           Shop No.69 Gulshan-e-Iqbal, Karachi
+          </li>
+          <li style="color:yellow">
+            Phone No: <br>(+92) 305-202-3045
+          </li>
+          <li style="color:yellow">
+            (+92) 316-396-8526
+          </li>
+          <li style="color:yellow">
+            (+92) 312-246-5107
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br><div class="row">
+        <div class="col-auto mb-4 mb-md-0">
+          <p class="pt-2"><strong>Sign Up for our Newsletter</strong></p>
+        </div>
+        <div class="col-md-5 col-12 mb-4 mb-md-0">
+          <div class="form-outline mb-4">
+            <input type="email" id="form5Example2" class="form-control" placeholder="Email Address" />
+          </div>
+        </div>
+        <div class="col-auto mb-4 mb-md-0">
+          <button type="submit" class="btn btn-danger mb-4">Subscribe</button>
+        </div>
+      </div>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);font-size:15px">
+    © 2021 Copyright:
+    <a class="text" href="home.html"style="text-decoration: none;"> E-Corner&trade;</a>
+  </div>
+</footer>
+</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
